@@ -1,0 +1,97 @@
+@import "flex";
+@import "basic";
+@import "fonts";
+
+header{
+	background: #7A8BDA;
+	.logo{
+		padding: 30px;
+	}
+}
+
+.main{
+	.content{
+		padding: 40px 0;
+		@media screen and (max-height: 600px){
+			padding: 15px 0;
+			height: auto;
+		}
+		.intro{
+			@include calc(height, "100% - 100px");
+		}
+		.dp{
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			border: 3px solid #b2b2b2;
+			overflow: hidden;
+		}
+		.kd{
+			font-family: remac;	
+			font-size: 400%;
+			padding: 50px 0;
+		}
+		p{
+			font-size: 130%;
+			text-align:center;
+			line-height: 1.5em; 
+			padding-bottom: 50px;
+		}
+		.works{
+			background: #7A8BDA;
+			border: 2px solid darken(#7A8BDA, 10%);
+			border-radius: 100%;
+			padding: 15px;
+			font-size: 150%; 
+			font-family: 'Raleway', sans-serif;
+			color: #fff;
+			cursor: pointer;
+			@include transition(all 0.1s);
+			&:hover{
+				@include transform(scale(1.1));
+			}
+		}
+		.wc{
+			// width: 300px;
+			// height: 150px;
+			width: 0;
+			height:0;
+			overflow: hidden;
+			// background:#efefef;
+			position: relative;
+			@include transition(all 0.2s);
+			margin-top: -10px;
+			a.nav{
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				border: 2px solid #7A8BDA;
+				font-size: 14px;
+				text-decoration: none;
+				&#four{
+					top:0;
+					right:0;
+				}
+				&#two{
+					top: 50px;
+					left: 80px;
+				}
+				&#three{
+					top: 50px;
+					right: 80px;
+				}
+			}
+		}
+	}
+	#works:checked{
+		&+label + .wc{
+			width: 300px;
+			height: 100px;
+			margin-top: 10px;
+		}
+		a.nav{
+			
+		}
+	}
+}

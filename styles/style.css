@@ -1,0 +1,184 @@
+.fl {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .fl.flc {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; }
+  .fl.jc {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+  .fl.je {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end; }
+  .fl.ac {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+  .fl.ae {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
+    -ms-flex-align: end; }
+  .fl.fw {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .fl.eg {
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1; }
+
+body, html {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.2em; }
+
+.fw {
+  width: 100%; }
+
+.indie {
+  font-family: 'Indie Flower', cursive; }
+
+button {
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s; }
+  button:focus {
+    outline: none; }
+  button:active {
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+    transform: translateY(2px); }
+
+input[type="checkbox"].hide {
+  display: none; }
+
+@font-face {
+  font-family: remac;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/remac.eot?#iefix") format("embedded-opentype"), url("../fonts/remac.woff2") format("woff2"), url("../fonts/remac.woff") format("woff"), url("../fonts/remac.ttf") format("truetype"), url("../fonts/remac.svg#remac") format("svg"); }
+header {
+  background: #7A8BDA; }
+  header .logo {
+    padding: 30px; }
+
+.main .content {
+  padding: 40px 0; }
+  @media screen and (max-height: 600px) {
+    .main .content {
+      padding: 15px 0;
+      height: auto; } }
+  .main .content .intro {
+    height: -webkit-calc(100% - 100px);
+    height: calc(100% - 100px); }
+  .main .content .dp {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 3px solid #b2b2b2;
+    overflow: hidden; }
+  .main .content .kd {
+    font-family: remac;
+    font-size: 400%;
+    padding: 50px 0; }
+  .main .content p {
+    font-size: 130%;
+    text-align: center;
+    line-height: 1.5em;
+    padding-bottom: 50px; }
+  .main .content .works {
+    background: #7A8BDA;
+    border: 2px solid #5268cf;
+    border-radius: 100%;
+    padding: 15px;
+    font-size: 150%;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s; }
+    .main .content .works:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+  .main .content .wc {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    margin-top: -10px; }
+    .main .content .wc a.nav {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      border: 2px solid #7A8BDA;
+      font-size: 14px;
+      text-decoration: none; }
+      .main .content .wc a.nav#four {
+        top: 0;
+        right: 0; }
+      .main .content .wc a.nav#two {
+        top: 50px;
+        left: 80px; }
+      .main .content .wc a.nav#three {
+        top: 50px;
+        right: 80px; }
+.main #works:checked + label + .wc {
+  width: 300px;
+  height: 100px;
+  margin-top: 10px; }
+
+/*# sourceMappingURL=style.css.map */

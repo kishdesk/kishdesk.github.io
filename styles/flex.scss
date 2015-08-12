@@ -1,0 +1,29 @@
+@import "bourbon/bourbon";
+
+.fl{
+	@include display(flex);
+	&.flc{
+		@include flex-direction(column);
+	}	
+	&.jc{
+		@include justify-content(center);
+	}
+	&.je{
+		@include justify-content(flex-end);
+	}
+	&.ac{
+		@include align-items(center);
+	}
+	&.ae{
+		@include align-items(flex-end);
+	}
+	&.fw{
+		@include flex-wrap(wrap);
+	}
+	&.eg{
+		@include flex-grow(1);
+	}
+}
+
+
+
