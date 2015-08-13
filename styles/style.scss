@@ -6,6 +6,9 @@ header{
 	background: #7A8BDA;
 	.logo{
 		padding: 30px;
+		@media screen and (max-width: 600px){
+			padding: 15px;
+		}
 	}
 }
 

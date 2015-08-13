@@ -107,6 +107,9 @@ header {
   background: #7A8BDA; }
   header .logo {
     padding: 30px; }
+    @media screen and (max-width: 600px) {
+      header .logo {
+        padding: 15px; } }
 
 .main .content {
   padding: 40px 0; }
