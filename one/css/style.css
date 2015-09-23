@@ -166,7 +166,8 @@ header {
   animation: fadeOut 0.5s ease-in;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  display: none; }
 
 @-webkit-keyframes fadeIn {
   from {

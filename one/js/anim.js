@@ -26,6 +26,8 @@ $(function(){
 	}
 	function end(){
 		$("#banner").animate({"opacity":"0"})
+		$("#banner").addClass("fadeOut");
+		$("content header").addClass("fadeIn");
 	}
 	setTimeout(init, 1000);
 })
