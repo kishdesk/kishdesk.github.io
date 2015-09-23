@@ -1,0 +1,279 @@
+@import "flex";
+@include font-face("db","../fonts/db");
+@include font-face("photocab","../fonts/photocab");
+bg{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	@include transition(all 0.8s);
+}
+
+content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+header{
+	position: relative;
+	height: 120px;
+	width: 80%;
+	// margin-top: 50px;
+	opacity: 0;
+	nav{
+		a{
+			color: #fff;
+			padding: 0 15px;
+		}
+	}
+}
+main{
+	min-height: 660px;
+	overflow: scroll;
+	width: 100%;
+	position: relative;
+	#co{
+		height: 670px;
+		width: 100%;
+		color: #fff;
+		margin-top: 50px;
+		h1{
+			font-size: 380%;
+			padding: 25px 0;
+			font-family: "photocab";
+			text-shadow: 1px 2px 0 #000;
+		}
+		h2{
+			font-size: 150%;
+			font-family: "db";
+			letter-spacing: 1px;
+			color: #E6AD62;
+		}
+		#scroll{
+			margin-top: 15%;
+			font-size: 110%;
+		}
+	}
+	
+	
+	
+	
+	#callback{
+		height: 100px;
+		width: 100%;
+		background: rgba(84, 80, 80, 0.71);
+		@include transition(all 0.2s);
+		z-index: 100;
+		&.fixed{
+			position: fixed;
+			bottom: 0;
+		}
+		form{
+			span{
+				margin: 20px 0 15px;
+				font-size: 150%;
+				text-shadow: 1px 1px 0 #000;
+			}
+			input{
+				width: 400px;
+				padding: 15px 10px;
+				border: 1px solid #fff;
+				border-radius: 3px;
+				// background: rgba(0,0,0,0.6);
+				background: transparent;
+				color: #fff;
+				font-size: 110%;
+				margin: 0 20px;
+			}
+			button{
+				padding: 10px 15px;
+				margin: 30px 0;
+				background: #18A8AF;
+				border: 2px solid darken(#18A8AF,10%);
+				border-radius: 2px;
+				font-size: 108%;
+				color: #fff;
+			}
+		}
+	}
+	
+	
+	
+	#about{
+		width: 100%;
+		height: 720px;
+		background: rgba(255,0,0,0.6);
+		color: #fff;
+		h1{
+			padding: 50px;
+			margin: 50px 0;
+			font-size: 180%;
+		}
+		p{
+			line-height: 2em;
+			width: 60%;
+			font-size: 120%;
+		}
+	}
+	
+	
+	
+	#services{
+		background: rgba(28, 178, 181,1);
+		width: 100%;
+		height: 720px;
+		color: #fff;
+		.cont{
+			height: 400px;
+			overflow: scroll;
+			width: 100%;
+			margin: 0 0 20px;
+			// text-align: center;
+			// scroll-snap-points-y: repeat(100%);
+			// scroll-snap-type: mandatory;
+			// scroll-snap-destination: 50% 50%;
+			.c{
+				width: 450px;
+				padding: 20px;
+				height: 450px;
+				.head{
+					font-size: 150%;
+					padding: 20px 0;
+				}
+				p{
+					line-height: 2em;
+				}
+			}
+		}
+		.nav{
+			margin-top:30px;
+			
+			a{
+				height: 70px;
+				width: 70px;
+				border-radius: 200px;
+				border: 1px solid #ccc;
+				margin: 0 20px;
+				@include transition(all 0.2s);
+				&.active{
+					height: 100px;
+					width: 100px;
+					border-color: #fff;
+				}
+			}
+		}
+		&.fixed{
+			position: fixed;
+			top: 60px;
+			left: 0;
+		}
+		h1{
+			font-size: 180%;
+			padding: 50px;
+			margin: 25px 0;
+		}
+	}
+	
+	
+	
+	#contact{
+		height: 720px;
+		width: 100%;
+		background: transparent;
+		color: #fff;
+		h1{
+			font-size: 150%;
+			padding: 50px 0;
+			margin:  0 0 20px;
+		}
+		form{
+			span{
+				margin: 20px 0 10px;
+			}
+			input{
+				width: 450px;
+				padding: 15px 10px;
+				// background: #fff;
+				border: 1px solid #fff;
+				background: transparent;
+			}
+			button{
+				padding: 15px 10px;
+				font-size: 110%;
+				margin: 30px 0;
+				background: #18A8AF;
+				border: 2px solid darken(#18A8AF,10%);
+				color: #fff;
+			}
+		}	
+	}
+	
+	
+}
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#banner{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		font-size: 180%;
+		font-weight: 400;
+		opacity: 0;
+		text-shadow: 1px 2px 0 #000;
+	}
+	
+	
+	
+	
+	
+	
+	
+	.fadeIn{
+		@include animation(fadeIn 0.5s ease-in);
+		@include animation-fill-mode(forwards);
+	}
+	.fadeOut{
+		@include animation(fadeOut 0.5s ease-in);
+		@include animation-fill-mode(forwards);
+		display: none;
+	}
+	
+	@include keyframes(fadeIn){
+		from{
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+		}
+	}
+	@include keyframes(fadeOut){
+		from{
+			opacity: 1;
+			margin-top:0;
+		}
+		to{
+			opacity: 0;
+			margin-top: -10px;
+		}
+	}
+	
+	
