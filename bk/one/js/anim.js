@@ -35,9 +35,9 @@ $(function(){
 		});
 		$("#banner").animate({"opacity":"0"},500);
 		$("#banner").addClass("fadeOut");
-		$("content header").addClass("fadeIn");
+		$("content").addClass("fadeIn");
 	}
-	if(!localStorage.getItem("intro")){
+	if(localStorage.getItem("intro")){
 		setTimeout(init, 1000);
 		localStorage.setItem("intro","1");	
 	}

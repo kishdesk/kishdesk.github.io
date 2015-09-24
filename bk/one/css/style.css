@@ -139,13 +139,13 @@ content {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  opacity: 0; }
 
 header {
   position: relative;
   height: 120px;
-  width: 80%;
-  opacity: 0; }
+  width: 80%; }
   header nav a {
     color: #fff;
     padding: 0 15px; }
@@ -226,7 +226,7 @@ main {
     main #services .cont {
       height: 400px;
       overflow: scroll;
-      width: 100%;
+      width: 40%;
       margin: 0 0 20px; }
       main #services .cont .c {
         width: 450px;
@@ -237,18 +237,26 @@ main {
           padding: 20px 0; }
         main #services .cont .c p {
           line-height: 2em; }
-    main #services .nav {
-      margin-top: 30px; }
-      main #services .nav a {
+    main #services #sc {
+      position: relative; }
+    main #services nav {
+      width: 500px;
+      height: 500px;
+      border-radius: 500px;
+      border: 1px solid #efefef;
+      right: -300px;
+      top: -50px;
+      position: absolute; }
+      main #services nav a {
         height: 70px;
         width: 70px;
         border-radius: 200px;
         border: 1px solid #ccc;
-        margin: 0 20px;
+        margin: 20px 0;
         -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
         transition: all 0.2s; }
-        main #services .nav a.active {
+        main #services nav a.active {
           height: 100px;
           width: 100px;
           border-color: #fff; }

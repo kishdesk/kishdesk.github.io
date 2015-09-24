@@ -16,6 +16,7 @@ content{
 	left: 0;
 	width: 100%;
 	height: 100%;
+	opacity: 0 ;
 }
 
 header{
@@ -23,7 +24,7 @@ header{
 	height: 120px;
 	width: 80%;
 	// margin-top: 50px;
-	opacity: 0;
+	// opacity: 0;
 	nav{
 		a{
 			color: #fff;
@@ -130,7 +131,7 @@ main{
 		.cont{
 			height: 400px;
 			overflow: scroll;
-			width: 100%;
+			width: 40%;
 			margin: 0 0 20px;
 			// text-align: center;
 			// scroll-snap-points-y: repeat(100%);
@@ -149,15 +150,23 @@ main{
 				}
 			}
 		}
-		.nav{
-			margin-top:30px;
-			
+		#sc{
+			position: relative;
+		}
+		nav{
+			width: 500px;
+			height: 500px;
+			border-radius: 500px;
+			border: 1px solid #efefef;
+			right: -300px;
+			top: -50px;
+			position: absolute;
 			a{
 				height: 70px;
 				width: 70px;
 				border-radius: 200px;
 				border: 1px solid #ccc;
-				margin: 0 20px;
+				margin: 20px 0;
 				@include transition(all 0.2s);
 				&.active{
 					height: 100px;
